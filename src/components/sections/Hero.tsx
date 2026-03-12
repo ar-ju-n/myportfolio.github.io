@@ -22,7 +22,7 @@ export default function Hero() {
         setQuoteIndex((prev) => (prev + 1) % quotes.length);
         setIsVisible(true);
       }, 500);
-    }, 5000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
@@ -36,10 +36,9 @@ export default function Hero() {
           Developer | Designer
         </h2>
         <div className="flex items-center min-h-[3.5rem] sm:min-h-[1.75rem]">
-          <p 
-            className={`max-w-2xl text-lg text-gray-600 dark:text-gray-400 transition-opacity duration-500 ease-in-out ${
-              isVisible ? "opacity-100" : "opacity-0"
-            }`}
+          <p
+            className={`max-w-2xl text-lg text-gray-600 dark:text-gray-400 transition-opacity duration-500 ease-in-out ${isVisible ? "opacity-100" : "opacity-0"
+              }`}
           >
             {quotes[quoteIndex]}
           </p>
