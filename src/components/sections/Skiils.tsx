@@ -3,7 +3,7 @@ import {
   SiNextdotjs,
   SiReact,
   SiHtml5,
-  SiCss3,
+  SiCss,
   SiTypescript,
   SiJavascript,
   SiPython,
@@ -32,7 +32,7 @@ const skillIcons: Record<string, React.ComponentType<{ className?: string }>> = 
   "Next.js": SiNextdotjs,
   React: SiReact,
   HTML: SiHtml5,
-  CSS: SiCss3,
+  CSS: SiCss,
   // Backend
   "Node.js": SiNodedotjs,
   Django: SiDjango,
@@ -48,7 +48,7 @@ const skillIcons: Record<string, React.ComponentType<{ className?: string }>> = 
 
 function SkillItem({ skill }: { skill: string }) {
   const IconComponent = skillIcons[skill] || FaPalette;
-  
+
   return (
     <li className="flex items-center gap-2 px-3 py-1 text-sm border border-gray-300 dark:border-gray-700 rounded-md text-gray-700 dark:text-gray-300">
       <IconComponent className="w-4 h-4 flex-shrink-0" />
